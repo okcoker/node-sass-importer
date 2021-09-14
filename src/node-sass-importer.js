@@ -98,6 +98,7 @@ function getRuntime(context) {
                 fileExtensions: [
                     '.scss',
                     '/_index.scss',
+                    '.css'
                 ],
             },
             stacks: [],
@@ -180,6 +181,6 @@ module.exports = function (url, prev, done) {
         const cnt = ((resolved.contents.length) ? resolved.contents : '// ' + url + '\n');
         done({contents: cnt});
     } else {
-        done({contents: '@error "Failed to load SCSS include: ' + url + '"'});
+        done({contents: '@error "Failed to load CSS/SCSS include: ' + url + '"'});
     }
 };
