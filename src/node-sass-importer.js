@@ -96,6 +96,7 @@ function getRuntime(context) {
                     '',
                 ],
                 fileExtensions: [
+                    '',
                     '.scss',
                     '/_index.scss',
                     '.css'
